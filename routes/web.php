@@ -21,9 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('dashboard', function () {
+
+//    return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';
 
@@ -33,4 +35,5 @@ Route::resource('users', UserController::class);
 Route::middleware('auth')->group(function () {
     Route::view('profile', 'auth.profile');
     Route::name('profile')->put('profile', [RegisteredUserController::class, 'update']);
+    Route::name('dashboard')->get('dashboard', [ArticleController::class, 'show']);
 });
