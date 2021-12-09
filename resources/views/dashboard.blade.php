@@ -18,15 +18,15 @@
 
     <div class="p-6">
               @foreach ($articles as $article)
-                <!-- @foreach ($authors as $author)  -->
+
               <div class="mt-5 text-gray-600 dark:text-gray-400 text-sm">
 
                 <div>
                   <td>{{ $article->id }}</td>
                   <td><strong>{{ $article->created_at }}</strong></td>
 
-                  <!-- <td>by</td>
-                  <td><strong>{{ $article->user_id->$author }}</strong></td> -->
+                  <td>by</td>
+                  <td><strong>{{ $article->user_id }}</strong></td>
                   
                   <div>
                     <td>{{ $article->description }}</td>
@@ -45,7 +45,7 @@
                 </div>
 
               </div>
-                @endforeach
+
               @endforeach
             </div>
 

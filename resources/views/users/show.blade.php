@@ -46,7 +46,7 @@
               <div class="ml-4 text-lg leading-7 font-semibold">MyPosts</div>
             </div>
 
-            <div class="ml-1">
+            <div class="grid grid-cols-1 md:grid-cols-2" >
               @foreach($articles as $article)
 
               <div class="mt-5 text-gray-600 dark:text-gray-400 text-sm">
@@ -80,7 +80,7 @@
 
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
           <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-            InstaTof by Caro, Aurélie && Zineb
+            Blurry Tof by Aurelie Delaunay
           </div>
         </div>
 
