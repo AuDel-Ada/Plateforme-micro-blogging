@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,19 +21,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('dashboard', function () {
-
-//    return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-
 require __DIR__.'/auth.php';
+
 
 Route::resource('articles', ArticleController::class);
 Route::resource('users', UserController::class);
 
+
 Route::middleware('auth')->group(function () {
-    Route::view('profile', 'auth.profile');
+    
+    Route::view('profile', 'auth.profile'); //allow to go from "Profile" on navigation link, to "modify my profile" page
     Route::name('profile')->put('profile', [RegisteredUserController::class, 'update']);
     Route::name('dashboard')->get('dashboard', [ArticleController::class, 'show']);
+    
 });
