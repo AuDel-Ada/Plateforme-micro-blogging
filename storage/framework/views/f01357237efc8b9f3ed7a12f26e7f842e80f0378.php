@@ -22,8 +22,11 @@
               <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
 
-            <a href="/profile" class="ml-1 underline ">
+            <a href="/modifProfile" class="ml-1 underline ">
               Edit my profile
+            </a>
+            <a href="/writeNewPost" class="ml-1 underline ">
+              New post
             </a>
           </div>
         </div>
@@ -53,7 +56,7 @@
               <div class="ml-4 text-lg leading-7 font-semibold">MyPosts</div>
             </div>
 
-            <div class="ml-1">
+            <div class="grid grid-cols-1 md:grid-cols-2" >
               <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
               <div class="mt-5 text-gray-600 dark:text-gray-400 text-sm">
@@ -87,7 +90,7 @@
 
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
           <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-            InstaTof by Caro, Aurélie && Zineb
+            Blurry Tof by Aurelie Delaunay
           </div>
         </div>
 
