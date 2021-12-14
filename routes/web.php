@@ -27,11 +27,12 @@ require __DIR__.'/auth.php';
 Route::resource('articles', ArticleController::class);
 Route::resource('users', UserController::class);
 
+// Route::resource('writeNewPost', ArticleController::create() );
 
 Route::middleware('auth')->group(function () {
     
-    Route::view('profile', 'auth.profile'); //allow to go from "Profile" on navigation link, to "modify my profile" page
-    Route::name('profile')->put('profile', [RegisteredUserController::class, 'update']);
+    Route::view('modifProfile', 'auth.modifProfile'); //allow to go from "Profile" on navigation link, to "modify my profile" page
+    Route::name('modifProfile')->put('modifProfile', [RegisteredUserController::class, 'update']);
     Route::name('dashboard')->get('dashboard', [ArticleController::class, 'show']);
     
 });
