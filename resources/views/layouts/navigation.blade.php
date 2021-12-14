@@ -42,8 +42,10 @@
                     <x-slot name="content">
 
                         <!-- link to profile -->
-                        <x-dropdown-link :href="route('profile')">
+                        <x-dropdown-link>
+                            <a href="{{ url('/users/' . Auth::id()) }}">
                                 {{ __('Profile') }}
+                            </a>
                         </x-dropdown-link>
 
                         <!-- Authentication -->
