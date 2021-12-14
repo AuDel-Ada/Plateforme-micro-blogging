@@ -24,6 +24,7 @@ class UserController extends Controller
         ]);
     }
 
+    //to be tested
     public function view_article($id){
         $user = User::find($id);
         $articles = $user->articles()->get();

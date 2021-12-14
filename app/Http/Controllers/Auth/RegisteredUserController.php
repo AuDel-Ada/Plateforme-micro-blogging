@@ -35,8 +35,6 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            // 'biography' => ['required', 'string', 'max:255'],
-            // 'img_profil' => ['required','string', 'max:5048']
         ]);
 
         $user = User::create([
@@ -77,6 +75,6 @@ class RegisteredUserController extends Controller
         $request->validate($rules);
         $request->user()->update($values);
         
-        return back()->with('status', __('You have been successfully updated.'. print_r($request->all(), true)));
+        return back()->with('status', __('You have been successfully updated.'));
     }
 }
