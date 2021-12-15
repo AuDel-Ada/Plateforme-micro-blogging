@@ -24,14 +24,12 @@
         <div class="relative flex items-top justify-center min-h-screen bg-amber-300 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
-                <div class="flex justify-left pt-8 sm:justify-start sm:pt-0 pb-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img src="<?php echo e(asset('storage/photos/Blurry_welcome.png')); ?>">
-                        <div class="flex items-center">Y TOF</div>
-                    </div>
+                <div class="flex flex-row justify-left pt-8 sm:justify-start sm:pt-0 pb-8">
+                    <img src="<?php echo e(asset('storage/photos/Blurry_welcome.png')); ?>">
+                    <img src="<?php echo e(asset('storage/photos/Blurry_suite.png')); ?>">
                 </div>
 
-                <div class="flex justify-center pt-8 sm:pt-10 text-lg">
+                <div class="flex justify-center pt-8 text-lg font-semibold">
                     The plateform for your most floppy, flowing, fuzzy, blurry pictures ! !
                 </div>
 
@@ -49,7 +47,7 @@
                             </div>
                         </div>
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
+                            <div class="flex items-center ml-20">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                     <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
                                 <a href="<?php echo e(url('/users/' . Auth::id())); ?>" class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">My Profile</a>

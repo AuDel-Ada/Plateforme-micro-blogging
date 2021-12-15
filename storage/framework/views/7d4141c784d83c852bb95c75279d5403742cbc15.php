@@ -23,37 +23,37 @@
     </div>
 
     <div class="p-6">
-              <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                
+          <div class="mt-5 text-gray-600 dark:text-gray-400 text-sm">
 
-              <div class="mt-5 text-gray-600 dark:text-gray-400 text-sm">
+            <div>
+              <td><?php echo e($article->id); ?></td>
+              <td><strong><?php echo e($article->created_at); ?></strong></td>
 
-                <div>
-                  <td><?php echo e($article->id); ?></td>
-                  <td><strong><?php echo e($article->created_at); ?></strong></td>
-
-                  <td>by</td>
-                  <td><strong><?php echo e($article->user_id); ?></strong></td>
+              <td>by</td>
+              <td><strong><?php echo e($article->user_id); ?></strong></td>
                   
-                  <div>
-                    <td><?php echo e($article->description); ?></td>
-                    <td><img src="<?php echo e($article->img_url); ?>"></td>
+              <div>
+                <td><?php echo e($article->description); ?></td>
+                <td><img src="<?php echo e($article->img_url); ?>"></td>
                     
-                    <div  class="flex flex-row ml-20">
-                      <td><a class="button is-warning border-2 mt-2" href="">Modifier</a>
-                        <form action="" method="post">
-                          <?php echo csrf_field(); ?>
-                          <?php echo method_field('DELETE'); ?>
-                          <button class="button is-danger border-2 mt-2 ml-2" type="submit">Supprimer</button>
-                        </form>
-                      </td>
-                    </div>
+                  <div  class="flex flex-row ml-20">
+                    <td><a class="button is-warning border-2 mt-2" href="">Modifier</a>
+                      <form action="" method="post">
+                        <?php echo csrf_field(); ?>
+                        <?php echo method_field('DELETE'); ?>
+                        <button class="button is-danger border-2 mt-2 ml-2" type="submit">Supprimer</button>
+                      </form>
+                    </td>
                   </div>
-                </div>
-
               </div>
-
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
+
+          </div>
+
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
