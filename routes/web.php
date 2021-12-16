@@ -31,8 +31,9 @@ Route::resource('users', UserController::class);
 
 Route::middleware('auth')->group(function () {
     
-    Route::view('modifProfile', 'auth.modifProfile'); //allow to go from "Profile" on navigation link, to "modify my profile" page
-    Route::name('modifProfile')->put('modifProfile', [RegisteredUserController::class, 'update']);
+    Route::view('/modifProfile', 'auth.modifProfile'); //allow to go from "Profile" on navigation link, to "modify my profile" page
+    Route::name('/modifProfile')->put('/modifProfile', [RegisteredUserController::class, 'update']);
+    Route::name('dashboard')->get('dashboard', [UserController::class, 'index']);
     Route::name('dashboard')->get('dashboard', [ArticleController::class, 'show']);
     
 });
