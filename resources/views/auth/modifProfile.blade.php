@@ -13,7 +13,7 @@
             <!-- Validation Errors -->
             <x-auth-validation-errors :errors="$errors" />
 
-            <form class="h-add-bottom" method="POST" action="{{ route('profile') }}" enctype="multipart/form-data">
+            <form class="h-add-bottom" method="POST" action="{{ route('/modifProfile') }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
