@@ -3,7 +3,7 @@
 Issue d'un projet collectif pour ADA TECH SCHOOL <br>
 Equipe de 3 personnes / 8 jours de travail (installation incluse)
 
-Continué ensuite en solo - Actuellement avec reprise du code, adaptation, et ajout : + 2 jours de travail
+Continué ensuite en solo - Actuellement avec reprise du code, adaptation, et ajout : + 8 jours de travail
 
 PROJET TOUJOURS EN COURS
 
